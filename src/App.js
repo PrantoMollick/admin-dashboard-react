@@ -58,13 +58,13 @@ function App() {
 
                   {/* Charts */}
                   <Route path='/line' element='Line' />
-                  <Route path='/area' element='area' />
-                  <Route path='/bar' element='bar' />
-                  <Route path='/pie' element='pie' />
-                  <Route path='/financial' element='financial' />
-                  <Route path='/color-mapping' element='color-mapping' />
-                  <Route path='/Pyamid' element='Line' />
-                  <Route path='/Line' element='Line' />
+                  <Route path='/area' element='Area' />
+                  <Route path='/bar' element='Bar' />
+                  <Route path='/pie' element='Pie' />
+                  <Route path='/financial' element='Financial' />
+                  <Route path='/color-mapping' element='ColorMapping' />
+                  <Route path='/pyramid' element='Pyramid' />
+                  <Route path='/stacked' element='Stacked' />
 
                 </Routes>
               </div>
