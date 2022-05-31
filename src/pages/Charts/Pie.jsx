@@ -6,4 +6,4 @@ const Pie = () => {
   )
 }
 
-export default Pie
+export default Pie;
