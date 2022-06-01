@@ -7,16 +7,31 @@ const initialState = {
   notification: false,
 };
 
-const StateContext = createContext(initialState);
+const StateContext = createContext();
 
 export const ContextProvider = (props) => {
   const [activeMenu, setActiveMenu] = useState(true);
+  const [isClicked, setIsClicked] = useState(initialState);
+  const [screenSize, setScreenSize] = useState(undefined);
+
+
+
+  const clickHandler = (clicked) => { 
+    setIsClicked({...initialState, [clicked] : true });
+  }
+
+
 
   return (
     <StateContext.Provider
       value={{
         activeMenu,
         setActiveMenu,
+        isClicked, 
+        setIsClicked, 
+        clickHandler,
+        screenSize,
+        setScreenSize
       }}
     >
       {props.children}
