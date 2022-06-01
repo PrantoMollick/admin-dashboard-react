@@ -22,16 +22,15 @@ const Stacked = ({ width, height }) => {
     <ChartComponent
       width={width}
       heigth={height}
-      id="stack charts"
-      // primaryXAxis={stackedPrimaryXAxis}
-      // primaryYAxis={stackedPrimaryYAxis}
+      id="charts"
+      primaryXAxis={stackedPrimaryXAxis}
+      primaryYAxis={stackedPrimaryYAxis}
       chartArea={{ border: { width: 0 } }}
       tooltip={{ enable: true }}
       legendSettings={{ background: "white" }}
     >
      <Inject services={[StackingColumnSeries, Category, Legend, Tooltip]} />
       <SeriesCollectionDirective>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         {stackedCustomSeries.map((item, index) => <SeriesDirective key={index} {...item} />)}
       </SeriesCollectionDirective>
     
