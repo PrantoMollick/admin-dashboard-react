@@ -12,7 +12,9 @@ const StateContext = createContext();
 export const ContextProvider = (props) => {
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);
+  const [currentColor, setCurrentColor] = useState('#03c9d7');
   const [screenSize, setScreenSize] = useState(undefined);
+
 
 
 
@@ -31,7 +33,9 @@ export const ContextProvider = (props) => {
         setIsClicked, 
         clickHandler,
         screenSize,
-        setScreenSize
+        setScreenSize,
+        currentColor, 
+        setCurrentColor
       }}
     >
       {props.children}
