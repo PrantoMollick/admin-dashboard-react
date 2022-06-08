@@ -13,7 +13,6 @@ import { Header } from "../components";
 
 const Employees = () => {
   const toolbarOptions = ["Search"];
-
   const editing = { allowDeleting: true, allowEditing: true };
 
   return (
